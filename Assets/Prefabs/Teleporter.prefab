@@ -92,7 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0c6546fe9c8a404dbf1134ef79b5af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Teleporter
-  TeleporterEnd: {fileID: 0}
+  teleporterEnd: {fileID: 0}
+  teleportDuration: 1
 --- !u!1 &6826062483416749655
 GameObject:
   m_ObjectHideFlags: 0
