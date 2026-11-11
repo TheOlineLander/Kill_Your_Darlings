@@ -30,11 +30,11 @@ public class Teleporter : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             rb.simulated = false; // stänger av fysik och collider tillfälligt
         }
+        player.transform.position = teleporterEnd.position;
 
         yield return new WaitForSeconds(teleportDuration);
 
         // Teleportera, visa och släpp
-        player.transform.position = teleporterEnd.position;
         if (rb != null) rb.simulated = true;
         if (sr != null) sr.enabled = true;
 
