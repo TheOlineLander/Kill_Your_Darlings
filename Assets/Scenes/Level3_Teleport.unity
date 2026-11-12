@@ -17967,6 +17967,7 @@ MonoBehaviour:
   target: {fileID: 1837786145}
   offset: {x: 0, y: 0, z: -20}
   smoothing: 5
+  lookOffsetX: 2
 --- !u!1 &525902243
 GameObject:
   m_ObjectHideFlags: 0
@@ -18524,6 +18525,14 @@ PrefabInstance:
       propertyPath: TeleporterEnd
       value: 
       objectReference: {fileID: 125999561}
+    - target: {fileID: 5098735171571892627, guid: 694622b8e454072438f4ba92e6e11a66, type: 3}
+      propertyPath: teleporterEnd
+      value: 
+      objectReference: {fileID: 125999561}
+    - target: {fileID: 5098735171571892627, guid: 694622b8e454072438f4ba92e6e11a66, type: 3}
+      propertyPath: teleportDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7976091211548972608, guid: 694622b8e454072438f4ba92e6e11a66, type: 3}
       propertyPath: m_Color.b
       value: 0.015686274
@@ -36675,6 +36684,14 @@ PrefabInstance:
       propertyPath: TeleporterEnd
       value: 
       objectReference: {fileID: 140248469}
+    - target: {fileID: 5098735171571892627, guid: 694622b8e454072438f4ba92e6e11a66, type: 3}
+      propertyPath: teleporterEnd
+      value: 
+      objectReference: {fileID: 140248469}
+    - target: {fileID: 5098735171571892627, guid: 694622b8e454072438f4ba92e6e11a66, type: 3}
+      propertyPath: teleportDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
