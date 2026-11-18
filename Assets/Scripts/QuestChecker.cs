@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QuestChecker : MonoBehaviour
 {
@@ -14,18 +15,10 @@ public class QuestChecker : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-           if(other.GetComponent<PlayerQuest>().GetStrawberries() >= other.GetComponent<PlayerQuest>().GetStrawberriesToCollect())
-            {
-                panel.SetActive(true);
-                finishedText.SetActive(true);
-                anim.SetTrigger("Flag");
-                //TODO change level
-            }
-            else
-            {
-                panel.SetActive(true);
-                unfinishedText.SetActive(true);
-            }
+            panel.SetActive(true);
+            finishedText.SetActive(true);
+            anim.SetTrigger("Flag");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
