@@ -5,8 +5,38 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Kill Your Darlings/Level2.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Level Devil/Level_1.unity
+    guid: 80012ecc8a87517458231e8965306547
+  - enabled: 1
+    path: Assets/Scenes/Level Devil/Level_2.unity
+    guid: adacd950f531577468b67a4c75639c6e
+  - enabled: 1
+    path: Assets/Scenes/Level Devil/Level_3.unity
+    guid: 679ef3659a636184d9f384aaf2746af4
+  - enabled: 1
+    path: Assets/Scenes/Level Devil/Level_4.unity
+    guid: 85e91326e0ef13641a72c434fe9ecfae
+  - enabled: 1
+    path: Assets/Scenes/Level Devil/Level_5.unity
+    guid: 548c87c0299cbbc458f3cd8a7fcad4da
+  - enabled: 1
+    path: Assets/Scenes/Level Devil/Level_6.unity
+    guid: 1dd6610df3a70a14693e7fb0dfc5c476
+  - enabled: 1
+    path: Assets/Scenes/Level Devil/Level_7.unity
+    guid: d84c4fb3c4c7df544829454cacb6cc39
+  - enabled: 1
+    path: Assets/Scenes/Level Devil/Level_8.unity
+    guid: 12a90245d6b169641ab16c287f57b820
+  - enabled: 1
+    path: Assets/Scenes/Level Devil/Level_9.unity
+    guid: 98dea783dd68e5148a63db04158f2ec7
+  - enabled: 1
+    path: Assets/Scenes/Level Devil/Level_10.unity
+    guid: 24abfe6a5b154874ebcb0ca60be4c4a6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

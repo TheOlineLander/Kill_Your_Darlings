@@ -8038,7 +8038,7 @@ Tilemap:
     m_Data: {fileID: 1373590857, guid: 95452c51d3a69db419662b656ebdac97, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 163
+    m_RefCount: 326
     m_Data:
       e00: 1
       e01: 0
@@ -24359,7 +24359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1752884779
 MonoBehaviour:
   m_ObjectHideFlags: 0

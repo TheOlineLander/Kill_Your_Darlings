@@ -6014,7 +6014,7 @@ Tilemap:
     m_Data: {fileID: 1954927139, guid: 95452c51d3a69db419662b656ebdac97, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 392
+    m_RefCount: 196
     m_Data:
       e00: 1
       e01: 0
@@ -7167,6 +7167,7 @@ MonoBehaviour:
   delay: 0
   traps:
   - {fileID: 1444805725}
+  destinationIndex: -1
   onTriggered:
     m_PersistentCalls:
       m_Calls: []
@@ -7360,7 +7361,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.4887123, y: 0}
+  m_Offset: {x: 0.032951057, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7370,7 +7371,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.4048386, y: 1.46875}
+  m_Size: {x: 1.3615113, y: 1.46875}
   m_EdgeRadius: 0
 --- !u!114 &646694820
 MonoBehaviour:
@@ -10981,6 +10982,7 @@ MonoBehaviour:
   triggerOnce: 1
   destination: {fileID: 0}
   offset: {x: 0, y: -4}
+  alternativeDestinations: []
   duration: 0.3
   ease:
     serializedVersion: 2
@@ -11379,6 +11381,7 @@ MonoBehaviour:
   triggerOnce: 1
   destination: {fileID: 1819801062}
   offset: {x: 0, y: -1.63}
+  alternativeDestinations: []
   duration: 0.5
   ease:
     serializedVersion: 2
@@ -12209,7 +12212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1752884779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14128,7 +14131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a432e56833024c44db400d2edd9acecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Killzone
-  spawnPosition: {fileID: 761742265}
+  timeToRespawn: 0.1
 --- !u!1 &2124142987
 GameObject:
   m_ObjectHideFlags: 0

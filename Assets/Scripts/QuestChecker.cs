@@ -1,11 +1,14 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class QuestChecker : MonoBehaviour
 {
-    [SerializeField] private GameObject panel, finishedText, unfinishedText;
+   [SerializeField] private GameObject panel, finishedText, unfinishedText;
+    private float delayBeforeNextScene = 2f;
 
     private Animator anim;
+    private int currentSceneIndex;
 
     private void Start()
     {
@@ -18,11 +21,21 @@ public class QuestChecker : MonoBehaviour
             panel.SetActive(true);
             finishedText.SetActive(true);
             anim.SetTrigger("Flag");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+            StartCoroutine(LoadNextSceneAfterDelay());
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+private IEnumerator LoadNextSceneAfterDelay()
+{
+    yield return new WaitForSeconds(delayBeforeNextScene);
+
+    int next = SceneManager.GetActiveScene().buildIndex + 1;
+    SceneManager.LoadScene(next < SceneManager.sceneCountInBuildSettings ? next : 0);
+}
+
+
+private void OnTriggerExit2D(Collider2D collision)
     {
         panel.SetActive(false);
         finishedText.SetActive(false);
