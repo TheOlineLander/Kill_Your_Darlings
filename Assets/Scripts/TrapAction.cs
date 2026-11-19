@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static UnityEditor.UIElements.ToolbarMenu;
 
 public abstract class TrapAction : MonoBehaviour
 {
@@ -10,9 +11,22 @@ public abstract class TrapAction : MonoBehaviour
     [Tooltip("If true, the trap only fires once until ResetTrap() is called.")]
     [SerializeField] private bool triggerOnce = true;
 
+    protected int variant = -1; // -1 = default behaviour
+
+    public void Activate() => Activate(-1);
+
     private bool hasTriggered;
     private bool isRunning;
 
+    public void Activate(int variantIndex)
+    {
+        if (isRunning) return;
+        if (triggerOnce && hasTriggered) return;
+
+        variant = variantIndex;
+        hasTriggered = true;
+        StartCoroutine(RunWithDelay());
+    }
     public void Activate()
     {
         if (isRunning) return;
