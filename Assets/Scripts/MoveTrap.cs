@@ -10,6 +10,9 @@ public class MoveTrap : TrapAction
     [Tooltip("Used when no destination Transform is set. Relative to the start position.")]
     [SerializeField] private Vector2 offset = new Vector2(0f, 3f);
 
+    [Header("Alternative destinations (optional)")]
+    [SerializeField] private Transform[] alternativeDestinations;
+
     [Header("Motion")]
     [SerializeField] private float duration = 0.5f;
     [SerializeField] private AnimationCurve ease = AnimationCurve.EaseInOut(0, 0, 1, 1);
@@ -33,7 +36,7 @@ public class MoveTrap : TrapAction
     protected override IEnumerator Run()
     {
         Vector2 from = transform.position;
-        Vector2 to = Target;
+        Vector2 to = GetTarget();
 
         yield return MoveBetween(from, to);
 
@@ -42,6 +45,19 @@ public class MoveTrap : TrapAction
             if (holdTime > 0f) yield return new WaitForSeconds(holdTime);
             yield return MoveBetween(to, from);
         }
+    }
+
+    private Vector2 GetTarget()
+    {
+        if (variant >= 0
+            && alternativeDestinations != null
+            && variant < alternativeDestinations.Length
+            && alternativeDestinations[variant] != null)
+        {
+            return alternativeDestinations[variant].position;
+        }
+
+        return Target; // your original destination / offset logic
     }
 
     private IEnumerator MoveBetween(Vector2 a, Vector2 b)

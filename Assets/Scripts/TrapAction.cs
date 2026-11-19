@@ -13,7 +13,7 @@ public abstract class TrapAction : MonoBehaviour
 
     protected int variant = -1; // -1 = default behaviour
 
-    public void Activate() => Activate(-1);
+   
 
     private bool hasTriggered;
     private bool isRunning;
@@ -27,7 +27,8 @@ public abstract class TrapAction : MonoBehaviour
         hasTriggered = true;
         StartCoroutine(RunWithDelay());
     }
-    public void Activate()
+    public void Activate() => Activate(-1);
+    /*public void Activate()
     {
         if (isRunning) return;
         if (triggerOnce && hasTriggered) return;
@@ -35,7 +36,7 @@ public abstract class TrapAction : MonoBehaviour
         hasTriggered = true;
         StartCoroutine(RunWithDelay());
     }
-
+    */
     private IEnumerator RunWithDelay()
     {
         isRunning = true;

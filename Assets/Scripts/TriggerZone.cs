@@ -19,6 +19,9 @@ public class TriggerZone : MonoBehaviour
     [Header("What to fire")]
     [SerializeField] private TrapAction[] traps;
 
+    [Tooltip("-1 = the trap's default destination. 0, 1, 2... = pick from the trap's Alternative Destinations.")]
+    [SerializeField] private int destinationIndex = -1;
+
     [Tooltip("Optional extras: sounds, camera shake, particles, etc.")]
     [SerializeField] private UnityEvent onTriggered;
 
@@ -54,7 +57,7 @@ public class TriggerZone : MonoBehaviour
 
         foreach (TrapAction trap in traps)
         {
-            if (trap != null) trap.Activate();
+            if (trap != null) trap.Activate(destinationIndex);
         }
 
         onTriggered?.Invoke();
