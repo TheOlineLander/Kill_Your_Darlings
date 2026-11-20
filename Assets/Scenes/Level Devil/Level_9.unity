@@ -6260,7 +6260,7 @@ Tilemap:
     m_Data: {fileID: 1954927139, guid: 95452c51d3a69db419662b656ebdac97, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 216
+    m_RefCount: 108
     m_Data:
       e00: 1
       e01: 0
@@ -10560,7 +10560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5765583401151936736, guid: dfdb2509580d0f64885308e2a989cdf1, type: 3}
       propertyPath: duration
-      value: 0.7
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5765583401151936736, guid: dfdb2509580d0f64885308e2a989cdf1, type: 3}
       propertyPath: offset.x
